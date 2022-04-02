@@ -1,6 +1,8 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './compo/About/About';
+import Countries from './compo/Countries/Countries';
+import CountryDetail from './compo/CountryDetail/CountryDetail';
 import FriendDetail from './compo/FriendDetail/FriendDetail';
 import Friends from './compo/Friends/Friends';
 import Header from './compo/Header/Header';
@@ -20,6 +22,8 @@ function App() {
         <Route path="/posts" element={<Post></Post>}>
           <Route path=':postId' element={<PostDetail></PostDetail>}></Route>
         </Route>
+        <Route path='/countries' element={<Countries></Countries>}></Route>
+        <Route path='/country/:countryName' element={<CountryDetail></CountryDetail>}></Route>
         <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
